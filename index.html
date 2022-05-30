@@ -13,15 +13,109 @@
         <link rel="stylesheet" href="style.css" />
         <title>Affine transformation</title>
     </head>
-    <body class="bg-secondary">
-        <div class="container mt-5 align-middle border">
+    <body class="bg-light">
+        <div class="container mt-5 align-middle">
             <div class="row">
                 <div class="col">
-                    <canvas class="border m-3"></canvas>
+                    <canvas class="border"></canvas>
                 </div>
-                <div class="col">
-                    <div>Controls</div>
-                    <div>Data</div>
+                <div class="col mt-3" style="min-width: 300px">
+                    <form>
+                        <div class="row g-4 align-items-center mb-3">
+                            <!-- POINT 1 -->
+                            <div class="col-auto">
+                                <span class="fs-5">Point 1</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointAX" class="form-label m-0">X</label>
+                                    </span>
+                                    <input type="number" class="form-control" required id="pointAX" value="400" min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointAY" class="form-label m-0">Y</label>
+                                    </span>
+                                    <input type="number" class="form-control" required id="pointAY" value="400" min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <input
+                                    type="color"
+                                    class="form-control form-control-color"
+                                    id="colorA"
+                                    value="#00ff00"
+                                    title="Choose your color"
+                                />
+                            </div>
+                        </div>
+                        <!-- POINT 2 -->
+                        <div class="row g-4 align-items-center mb-3">
+                            <div class="col-auto">
+                                <span class="fs-5">Point 2</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointBX" class="form-label m-0">X</label>
+                                    </span>
+                                    <input type="number" class="form-control" id="pointBX" value="100" required min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointBY" class="form-label m-0">Y</label>
+                                    </span>
+                                    <input type="number" class="form-control" id="pointBY" value="400" required min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <input
+                                    type="color"
+                                    class="form-control form-control-color"
+                                    id="colorB"
+                                    value="#ff0000"
+                                    title="Choose your color"
+                                />
+                            </div>
+                        </div>
+                        <!-- POINT 3 -->
+                        <div class="row g-4 align-items-center mb-3">
+                            <div class="col-auto">
+                                <span class="fs-5">Point 3</span>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointCX" class="form-label m-0">X</label>
+                                    </span>
+                                    <input type="number" class="form-control" id="pointCX" value="250" required min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <label for="pointCY" class="form-label m-0">Y</label>
+                                    </span>
+                                    <input type="number" class="form-control" id="pointCY" value="100" required min="0" max="500"/>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <input
+                                    type="color"
+                                    class="form-control form-control-color"
+                                    id="colorC"
+                                    value="#0000ff"
+                                    title="Choose your color"
+                                />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary fs-5">Draw!</button>
+                    </form>
                 </div>
             </div>
         </div>
